@@ -1,0 +1,18 @@
+Package: ASMR
+Type: Package
+Title: Anchored Score-Matching Representative (ASMR) and Transformed Mean Representative (TMR)
+Version: 0.1.0
+Author: Keren Li [aut]
+Author@R: 
+    c(person(given = "Keren",
+             family = "Li",
+             role = c("aut"),
+             email = "kli@uab.edu"))
+Maintainer: Keren Li <ykli@uab.edu>
+Description: This package contains the implementation of ASMR and TMR, developed for distributed machine learning and generalized linear models (GLMs). These methods provide robust alternatives to traditional federated learning by handling data heterogeneity, improving communication efficiency, and enabling further statistical inference.
+License: LGPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Imports: dplyr
+Depends: R (>= 4.0)
+RoxygenNote: 7.3.1
