@@ -21,3 +21,46 @@ install.packages("devtools")
 
 # Install the ASMR package from GitHub
 devtools::install_github("kerenli/ASMR")
+```
+
+## Example Usage
+
+### Logistic Regression with ASMR
+
+```r
+# Load sample dataset
+data <- data.frame(node = rep(1:10, each = 100),
+                   x1 = rnorm(1000),
+                   x2 = rnorm(1000),
+                   y = rbinom(1000, 1, 0.5))
+
+# Apply ASMR for logistic regression
+beta_amsr <- rep.amsr.logit(data, names.x = c("x1", "x2"), names.y = "y", iter = 5)
+
+# View the coefficients from each iteration
+print(beta_amsr)
+```
+
+### Poisson Regression with TMR
+
+```r
+# Load sample dataset
+data <- data.frame(node = rep(1:10, each = 100),
+                   x1 = rnorm(1000),
+                   x2 = rnorm(1000),
+                   y = rpois(1000, lambda = 2))
+
+# Apply TMR for Poisson regression
+beta_tmr <- rep.poisson(data, names.x = c("x1", "x2"), names.y = "y", iter = 5)
+
+# View the coefficients from each iteration
+print(beta_tmr)
+```
+
+## Functions
+
+- `rep.amsr.logit()`: Perform ASMR on distributed datasets for logistic regression.
+- `rep.poisson()`: Perform TMR/ASMR for Poisson regression models.
+- `mr.generic()`: Construct a generic Mean Representative (MR) for local data.
+- `asmr.logit()`: Construct Anchored Score-Matching Representative (ASMR) for logistic regression.
+- `asmr.poisson()`: Construct Anchored Score-Matching Representative (ASMR) for Poisson regression.
