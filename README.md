@@ -20,4 +20,4 @@ This repository contains the implementation of **Anchored Score-Matching Represe
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/kerenli/ASMR-tmr.git
+git clone https://github.com/kerenli/ASMR.git
