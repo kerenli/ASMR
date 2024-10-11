@@ -64,3 +64,13 @@ print(beta_tmr)
 - `mr.generic()`: Construct a generic Mean Representative (MR) for local data.
 - `asmr.logit()`: Construct Anchored Score-Matching Representative (ASMR) for logistic regression.
 - `asmr.poisson()`: Construct Anchored Score-Matching Representative (ASMR) for Poisson regression.
+
+## Development Status
+
+This package is currently under active development and is expected to undergo significant updates, including new features, expanded functionality, and improved efficiency. Contributions, suggestions, and bug reports are welcome!
+
+## License
+
+This package is licensed under the MIT License.
+
+
