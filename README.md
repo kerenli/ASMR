@@ -1,23 +1,23 @@
-# ASMR and TMR: Representative Learning in Distributed Machine Learning
+# ASMR: Anchored Score-Matching Representative in Distributed Machine Learning
 
-This repository contains the implementation of **Anchored Score-Matching Representative (ASMR)** and **Transformed Mean Representative (TMR)**, developed for distributed machine learning and generalized linear models (GLMs). These methods provide robust alternatives to traditional federated learning by handling data heterogeneity, improving communication efficiency, and enabling further statistical inference.
+## Overview
+The **ASMR** package implements methods for constructing **Anchored Score-Matching Representatives (ASMR)** and **Transformed Mean Representatives (TMR)** for distributed datasets in logistic, Poisson, and linear regression settings. These methods are designed to provide efficient, representative-based inference in generalized linear models (GLMs) and extend to other smooth loss functions.
 
-## Features
+This package is currently under active development and will be expanded with further functionality and improvements over time.
 
-- **Transformed Mean Representative (TMR)**: Extends the Mean Representative (MR) by incorporating transformations based on the link function in GLMs, reducing bias in non-linear models.
-- **Anchored Score-Matching Representative (ASMR)**: An enhancement of Score-Matching Representative (SMR) that anchors the intercept, ensuring better interpretability, stability, and representativeness in distributed environments.
-
-## Contents
-
-- `TMR/`: Contains the implementation of the **TMR** method, including handling continuous and generalized linear model (GLM) data.
-- `ASMR/`: Includes the implementation of the **ASMR** method, which improves model fitting in distributed learning by ensuring gradient-based representative updates.
-- `data/`: Sample datasets used to test the TMR and ASMR methods.
-- `docs/`: Documentation on how to use the methods and code structure.
-- `examples/`: Example scripts to demonstrate how to run TMR and ASMR on simulated data.
+## Key Features
+- **ASMR (Anchored Score-Matching Representative)**: A method to handle distributed datasets, capturing local data structure more accurately by anchoring the intercept and matching gradients across nodes.
+- **TMR (Transformed Mean Representative)**: An extension of the Mean Representative (MR) method, designed to incorporate non-linear transformations through the link function in GLMs.
+- Supports **logistic regression**, **Poisson regression**, and **linear regression** models.
+- **Iterative updates** for more precise parameter estimation in distributed machine learning environments.
+- Subpartitioning strategies for improved representativeness in heterogeneous data.
 
 ## Installation
+Currently, the package is under development and not yet available on CRAN. You can install the development version from GitHub:
 
-Clone this repository to your local machine:
+```r
+# Install devtools if necessary
+install.packages("devtools")
 
-```bash
-git clone https://github.com/kerenli/ASMR.git
+# Install the ASMR package from GitHub
+devtools::install_github("kerenli/ASMR")
